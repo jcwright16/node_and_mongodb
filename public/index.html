@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+         <meta charset="utf-8" />
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        
+        <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+         <link rel="stylesheet" href="./style.css" />
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" />
+    </head>
+
+    <body>
+        <div class="container mt-3">
+            <br />
+            <h1>Contact Us</h1>
+            <br />
+            <form action="/formFillUp" method="POST">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputName" style="font-size: 23px">
+                            Name
+                        </label>
+                        <input type="text" class="form-control" id="name" name="name" />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="inputReason" style="font-size: 23px">
+                            Reason for contacting
+                        </label>
+                        <input type="text" class="form-control" id="reason" name="reason" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail" style="font-size: 23px">
+                            Email
+                        </label>
+                        <input type="text" class="form-control" id="email" name="email" />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="inputPhone" style="font-size: 23px">
+                            Phone
+                        </label>
+                        <input type="text" class="form-control" id="phone" name="phone" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity" style="font-size: 23px">
+                            City
+                        </label>
+                        <input type="text" class="form-control" id="city" name="city" />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="inputState" style="font-size: 23px">
+                            State
+                        </label>
+                        <input type="text" class="form-control" id="state" name="state" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputAddress" style="font-size: 23px">
+                        Address
+                    </label>
+                    <input type="text" class="form-control" id="addressline" name="addressline" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </body>
+</html>

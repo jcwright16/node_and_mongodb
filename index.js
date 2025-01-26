@@ -52,7 +52,7 @@ app.post("/formFillUp", (req, res) => {
         }
     );
 
-    return res.redirect("formSubmitted.hmtl");
+    return res.redirect("formSubmitted.html");
 });
 
 app.listen(port, () => {

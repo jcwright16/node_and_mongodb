@@ -1,0 +1,29 @@
+{
+  "name": "node_and_mongodb",
+  "version": "1.0.0",
+  "description": "An example project using Node.js, Bootstrap, and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcwright16/node_and_mongodb.git"
+  },
+  "keywords": [
+    "[\"React\"",
+    "\"Bootstrap\"",
+    "\"MongoDB\"]"
+  ],
+  "author": "Jason Wright",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcwright16/node_and_mongodb/issues"
+  },
+  "homepage": "https://github.com/jcwright16/node_and_mongodb#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2",
+    "nodemon": "^3.1.9"
+  }
+}

@@ -3,25 +3,8 @@ const express = require("express");
 
 // Importing mongoose module
 const mongoose = require("mongoose");
-const port = 80;
+const port = 3000;
 const app = express();
-
-// Handling the get request
-app.get("/", (req, res) => {
-    res.send("Hello World");
-});
-
-// Starting the server on the 80 port
-app.listen(port, () => {
-    console.log(`The application started successfully on port ${port}`);
-});
-
-// Middleware for handling POST and PUT requests
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// For serving static html files
-app.use(express.static('public'));
 
 // Connect to database
 mongoose.connect("mongodb://localhost/projectDG", {
@@ -29,6 +12,24 @@ mongoose.connect("mongodb://localhost/projectDG", {
     useUnifiedTopology: true,
 });
 let db = mongoose.connection;
+
+app.use(express.json());
+
+// For serving static HTML files
+app.use(express.static('public'));
+
+// Middleware for handling POST and PUT requests
+app.use(express.urlencoded({ extended: true }));
+
+// Handling the get request
+app.get("/", (req, res) => {
+    res.set({
+        "Allow-access-Allow-Origin": "*",
+    });
+
+    // res.send("Hello World");
+    return res.redirect("index.html");
+});
 
 // Define POST method
 app.post("/formFillUp", (req, res) => {
@@ -59,4 +60,9 @@ app.post("/formFillUp", (req, res) => {
         });
 
     return res.redirect("formSubmitted.html");
+});
+
+// Starting the server on the 80 port
+app.listen(port, () => {
+    console.log(`The application started successfully on port ${port}`);
 });
